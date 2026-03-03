@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Language
-    const savedLang = localStorage.getItem('language') || 'en';
+    const savedLang = localStorage.getItem('language') || 'zh';
     setLanguage(savedLang);
 
     // Add Language Toggle Button Listener
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const currentLang = localStorage.getItem('language') || 'en';
+            const currentLang = localStorage.getItem('language') || 'zh';
             const newLang = currentLang === 'en' ? 'zh' : 'en';
             setLanguage(newLang);
         });
