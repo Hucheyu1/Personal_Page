@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,24 +21,56 @@
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="github.html" class="nav-link active">GitHub</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                <li><a href="resume.html" class="nav-link" data-i18n="nav-resume">Resume</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="github.html" class="nav-link active" data-i18n="nav-github">GitHub</a></li>
+                <li><button id="lang-toggle" class="btn-lang" title="Switch Language">中</button></li>
             </ul>
         </div>
     </nav>
     <div class="container section-padding">
-        <h1 class="hero-title" style="font-size: 2.5rem; text-align: left; opacity: 1; transform: none;">GitHub Activities</h1>
-         <p class="hero-subtitle" style="text-align: left; margin: 0; opacity: 1; transform: none;">Content coming soon...</p>
+        <div class="github-header">
+            <h1 class="hero-title" style="font-size: 2.5rem; opacity: 1; transform: none;" data-i18n="github-activities">GitHub Activities</h1>
+            <p class="hero-subtitle" style="margin-top: 10px;" data-i18n="github-subtitle">Open Source Contributions & Statistics</p>
+            
+            <!-- Dynamic Profile Container -->
+            <div id="github-profile" class="glass" style="margin-top: 30px; padding: 30px; border-radius: 12px; display: none;">
+                <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                    <img id="gh-avatar" src="" alt="Profile" class="github-avatar" style="margin-bottom: 0;">
+                    <div style="text-align: left;">
+                        <h2 id="gh-name" style="color: var(--primary);"></h2>
+                        <p id="gh-bio" style="color: var(--text-muted); margin-bottom: 10px;"></p>
+                        <div class="repo-stats" style="justify-content: flex-start;">
+                            <span><i class="fa-solid fa-users"></i> <span id="gh-followers"></span> Followers</span>
+                            <span><i class="fa-solid fa-book-bookmark"></i> <span id="gh-public-repos"></span> Repos</span>
+                        </div>
+                    </div>
+                    <div style="margin-left: auto;">
+                        <a href="https://github.com/Hucheyu1" target="_blank" class="btn btn-outline" data-i18n="gh-view-profile">
+                            View Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="repo-loader" style="text-align: center; color: var(--text-muted); padding: 40px;">
+            <i class="fa-solid fa-circle-notch fa-spin fa-2x"></i>
+            <p style="margin-top: 10px;">Loading Repositories...</p>
+        </div>
+
+        <div class="repo-grid" id="repo-container">
+            <!-- Repos will be injected here via JS -->
+        </div>
     </div>
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
+            <div class="footer-text" data-i18n="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Hucheyu1" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:hu1371381683@163.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>

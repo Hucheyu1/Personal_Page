@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,24 +21,106 @@
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="github.html" class="nav-link">GitHub</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                <li><a href="resume.html" class="nav-link" data-i18n="nav-resume">Resume</a></li>
+                <li><a href="projects.html" class="nav-link active" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="github.html" class="nav-link" data-i18n="nav-github">GitHub</a></li>
+                <li><button id="lang-toggle" class="btn-lang" title="Switch Language">中</button></li>
             </ul>
         </div>
     </nav>
     <div class="container section-padding">
-        <h1 class="hero-title" style="font-size: 2.5rem; text-align: left; opacity: 1; transform: none;">Projects</h1>
-         <p class="hero-subtitle" style="text-align: left; margin: 0; opacity: 1; transform: none;">Content coming soon...</p>
+        <h1 class="hero-title" style="font-size: 2.5rem; text-align: left; opacity: 1; transform: none;" data-i18n="nav-projects">Projects</h1>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="project-title" data-i18n="proj-1-title">Manipulator Modeling & Control</h3>
+                <p class="project-desc" data-i18n="proj-1-desc">
+                    Deep Bilinear Koopman Network and MPC-KESO for high-precision tracking and noise robustness.
+                </p>
+                <div class="project-media">
+                    <video controls muted preload="metadata">
+                        <source src="media/project_1/Video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls muted preload="metadata">
+                        <source src="media/project_1/Video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-tags">
+                    <span class="tag-sm">Python</span>
+                    <span class="tag-sm">MPC</span>
+                    <span class="tag-sm">Koopman</span>
+                    <span class="tag-sm">MuJoCo</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Hucheyu1/Lerobot-mujoco-sim2real" target="_blank" class="project-link" title="Code"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="project-link" title="Paper"><i class="fa-solid fa-file-pdf"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fa-solid fa-location-arrow"></i></div>
+                <h3 class="project-title" data-i18n="proj-2-title">DRL Mobile Robot Navigation</h3>
+                <p class="project-desc" data-i18n="proj-2-desc">
+                    Autonomous path planning in unknown environments using DDPG-LSTM and ROS Navigation.
+                </p>
+                <div class="project-media">
+                    <video controls muted preload="metadata">
+                        <source src="media/project_2/Video1.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls muted preload="metadata">
+                        <source src="media/project_2/Video2.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-tags">
+                    <span class="tag-sm">ROS</span>
+                    <span class="tag-sm">DDPG-LSTM</span>
+                    <span class="tag-sm">Gazebo</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Hucheyu1/ROS_MobileRobot_RL" target="_blank" class="project-link" title="Code"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fa-solid fa-car"></i></div>
+                <h3 class="project-title" data-i18n="proj-3-title">MuJoCo Diff-Drive MPC</h3>
+                <p class="project-desc" data-i18n="proj-3-desc">
+                    A closed-loop control system integrating A* path planning and Model Predictive Control (MPC) tracking.
+                </p>
+                <!-- Only adding container if videos exist, currently folder 3 is empty -->
+                <!-- 
+                <div class="project-media">
+                     Video placeholder 
+                </div> 
+                -->
+                <div class="project-tags">
+                    <span class="tag-sm">Python</span>
+                    <span class="tag-sm">MPC</span>
+                    <span class="tag-sm">Path Planning</span>
+                    <span class="tag-sm">MuJoCo</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Hucheyu1/Mujoco_MobileRobot" target="_blank" class="project-link" title="Code"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
+            <div class="footer-text" data-i18n="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Hucheyu1" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:hu1371381683@163.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>

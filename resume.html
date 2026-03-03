@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,24 +21,117 @@
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="resume.html" class="nav-link active">Resume</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="github.html" class="nav-link">GitHub</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                <li><a href="resume.html" class="nav-link active" data-i18n="nav-resume">Resume</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="github.html" class="nav-link" data-i18n="nav-github">GitHub</a></li>
+                <li><button id="lang-toggle" class="btn-lang" title="Switch Language">中</button></li>
             </ul>
         </div>
     </nav>
-    <div class="container section-padding">
-        <h1 class="hero-title" style="font-size: 2.5rem; text-align: left; opacity: 1; transform: none;">Resume</h1>
-        <p class="hero-subtitle" style="text-align: left; margin: 0; opacity: 1; transform: none;">Content coming soon...</p>
+        <!-- Education -->
+        <div class="resume-section">
+            <h2 class="section-title" data-i18n="resume-edu">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2024.09 - Present</span>
+                    <h3 class="timeline-title" data-i18n="edu-1-school">South China University of Technology (985)</h3>
+                    <h4 class="timeline-subtitle" data-i18n="edu-1-degree">Master of Engineering in Control Science and Engineering</h4>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2020.09 - 2024.06</span>
+                    <h3 class="timeline-title" data-i18n="edu-2-school">University of Science and Technology Beijing (211)</h3>
+                    <h4 class="timeline-subtitle" data-i18n="edu-2-degree">Bachelor of Engineering in Robotics Engineering</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="resume-section">
+            <h2 class="section-title" data-i18n="resume-exp">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2024.09 - Present</span>
+                    <h3 class="timeline-title" data-i18n="exp-1-role">Manipulator Modeling & Control based on Deep Learning & Koopman</h3>
+                    <h4 class="timeline-subtitle" data-i18n="exp-1-company">Master's Thesis Research</h4>
+                    <ul class="timeline-desc">
+                        <li data-i18n="exp-1-desc-1">Constructed Deep Bilinear Koopman Network for finite-dimensional lifting of manipulator dynamics.</li>
+                        <li data-i18n="exp-1-desc-2">Designed MPC-KESO framework fusing Kalman Filter and ESO for noise/error estimation.</li>
+                        <li data-i18n="exp-1-desc-3">Validated on MuJoCo simulation and SO-ARM101 real robot; Submitted to IEEE RA-L.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2023.10 - 2024.06</span>
+                    <h3 class="timeline-title" data-i18n="exp-2-role">Mobile Robot Path Planning based on Deep RL</h3>
+                    <h4 class="timeline-subtitle" data-i18n="exp-2-company">Undergraduate Thesis</h4>
+                    <ul class="timeline-desc">
+                        <li data-i18n="exp-2-desc-1">Built DDPG-LSTM network to enhance dynamic obstacle perception capabilities.</li>
+                        <li data-i18n="exp-2-desc-2">Designed state/action spaces and reward functions for unknown environment navigation.</li>
+                        <li data-i18n="exp-2-desc-3">Conducted 3D simulations in ROS + Gazebo environments.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Side Project</span>
+                    <h3 class="timeline-title" data-i18n="exp-3-role">Diff-Drive Robot Path Planning & MPC Control</h3>
+                    <h4 class="timeline-subtitle" data-i18n="exp-3-company">Based on MuJoCo</h4>
+                    <ul class="timeline-desc">
+                        <li data-i18n="exp-3-desc-1">Implemented A*, RRT, DWA planning algorithms and integrated with MPC for tracking.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="resume-section">
+            <h2 class="section-title" data-i18n="resume-skills">Technical Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skill-algo">Programming & Algo</h3>
+                    <div class="skill-tags" id="skill-algo-tags">
+                        <!-- Injected via JS or static -->
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Deep RL</span>
+                        <span class="skill-tag">Modeling & Control</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skill-robotics">Robotics & Sim</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS</span>
+                        <span class="skill-tag">MuJoCo</span>
+                        <span class="skill-tag">Gazebo</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skill-theory">Theory & Application</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-i18n="skill-tag-1">Control Theory</span>
+                        <span class="skill-tag" data-i18n="skill-tag-2">Trajectory Planning</span>
+                        <span class="skill-tag" data-i18n="skill-tag-3">Dynamic Obstacle Avoidance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors -->
+        <div class="resume-section">
+            <h2 class="section-title" data-i18n="resume-honors">Honors & Awards</h2>
+            <ul class="timeline-desc" style="list-style: none; padding-left: 10px;">
+                <li style="margin-bottom: 10px; color: var(--text-main);"><i class="fa-solid fa-trophy" style="color: var(--secondary); margin-right: 10px;"></i> <span data-i18n="honor-1">Math Competitions (National/Beijing/School): 1st Prize</span></li>
+                <li style="margin-bottom: 10px; color: var(--text-main);"><i class="fa-solid fa-medal" style="color: var(--secondary); margin-right: 10px;"></i> <span data-i18n="honor-2">Physics & Smart Car Competitions: 2nd Prize</span></li>
+                <li style="margin-bottom: 10px; color: var(--text-main);"><i class="fa-solid fa-star" style="color: var(--secondary); margin-right: 10px;"></i> <span data-i18n="honor-3">People's Special & 2nd Scholarship / Outstanding Student (2x)</span></li>
+                <li style="margin-bottom: 10px; color: var(--text-main);"><i class="fa-solid fa-language" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="honor-4">CET-6: 512 / CET-4: 576</span></li>
+            </ul>
+        </div>
     </div>
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
+            <div class="footer-text" data-i18n="footer-text">&copy; 2026 Developer Name. Built with Vanilla Code.</div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Hucheyu1" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:hu1371381683@163.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>
