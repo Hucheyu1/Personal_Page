@@ -396,13 +396,13 @@ ul {
    8. RESUME & TIMELINE STYLES
    ========================================= */
 .resume-section {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
     padding-top: 1rem;
 }
 
 .section-title {
     font-size: 2.2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
     color: var(--text-main);
@@ -428,7 +428,7 @@ ul {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
